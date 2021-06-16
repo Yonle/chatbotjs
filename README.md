@@ -11,7 +11,7 @@
 ## Installation
 Currently, ChatbotJS only available in-CLI Installation.
 ```bash
-npm install -g chatbotjs
+npm install -g @yonle/chatbotjs
 ```
 
 ## Running a demo
