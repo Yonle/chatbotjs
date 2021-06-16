@@ -1,19 +1,19 @@
 {
   "name": "@yonle/chatbotjs",
-  "version": "0.0.0-dev",
+  "version": "0.0.1-dev",
   "description": "A simple runner that allows user to chat with Chatbot script",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-    "chatbotjs": "index.js"
+    "chatbotjs": "cli.js"
   },
   "keywords": [],
   "author": "Yonle",
   "license": "ISC",
   "dependencies": {
-  	"ms": "latest"
+    "ms": "latest"
   },
   "repository": {
     "type": "git",
