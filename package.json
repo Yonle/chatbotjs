@@ -1,6 +1,6 @@
 {
   "name": "@yonle/chatbotjs",
-  "version": "0.0.1-dev",
+  "version": "0.0.2-dev",
   "description": "A simple runner that allows user to chat with Chatbot script",
   "main": "index.js",
   "scripts": {

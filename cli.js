@@ -23,6 +23,9 @@ process.argv.forEach((i, index) => {
 });
 let ai = chatbotjs(sc, opt);
 
+if (ai.nickname) console.log(`${ai.nickname} Version ${ai.version||"Unknow"}\n`);
+if (ai.description) console.log(ai.description);
+
 rl.setPrompt("(You) ");
 rl.on('line', async (str) => {
 	process.stdout.write("(chatbot) Thinking.... ");

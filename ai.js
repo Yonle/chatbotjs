@@ -1,5 +1,6 @@
 // ChatbotJS Example AI
 let exec = require("child_process").spawnSync;
+let fs = require("fs");
 
 let data = {
 	"hello world": "Hi Human!",
@@ -153,6 +154,10 @@ let data = {
 module.exports = {
 	// Bot name
 	nickname: "Demobot",
+	// Bot version
+	version: "1.0.2",
+	// Bot description
+	description: "A chatbot that used to demonstrate ChatbotJS",
 	// Data, Thw triggers.
 	data
 }

@@ -19,6 +19,7 @@ module.exports = function runner(ai, opt = {}) {
 	let v = (log, type) => opt.verbose(`[${(type||"verbose").toUpperCase()}] ${log}`);
 	v(`Loaded & Readed ${Object.keys(ai.data).length} Triggers.`, "CHATBOT");
 	if (ai.nickname) v(`Bot name: ${ai.nickname}, "CHATBOT"`);
+	if (ai.version) v(`Bot version: ${ai.version}`, "CHATBOT");
 	bot = function (str, cb) {
 			if (typeof(cb) !== "function") return new Error("Callback must be a function");
         	let response = [];
@@ -60,6 +61,8 @@ module.exports = function runner(ai, opt = {}) {
                 	});
         	});
 	}
-	bot.nickname = ai.nickname;
+	if (ai.nickname) bot.nickname = ai.nickname;
+	if (ai.version) bot.version = ai.version;
+	if (ai.description) bot.description = ai.description;
 	return bot;
 }
