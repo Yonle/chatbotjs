@@ -1,0 +1,27 @@
+{
+  "name": "chatbotjs",
+  "version": "0.0.0-dev",
+  "description": "A simple runner that allows user to chat with Chatbot script",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "chatbotjs": "index.js"
+  },
+  "keywords": [],
+  "author": "Yonle",
+  "license": "ISC",
+  "dependencies": {
+  	"ms": "latest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yonle/chatbotjs.git"
+  },
+  "private": false,
+  "bugs": {
+    "url": "https://github.com/Yonle/chatbotjs/issues"
+  },
+  "homepage": "https://github.com/Yonle/chatbotjs#readme"
+}
