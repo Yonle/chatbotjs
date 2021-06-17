@@ -12,6 +12,12 @@ let data = {
 	"hey": [
 		"Heyya. How's your day?"
 	],
+	"How are you": [
+		"Feeling great",
+		"A little bored",
+		"Maan, It's very hot today.",
+		"My man is hot right now coz ur CPU is hot."
+	],
 	"fine": [
 		"Wanna take a break?",
 		"Want some coffe?",
@@ -77,7 +83,7 @@ let data = {
 			say("Updating.... Please wait....");
 			require("https").get("https://yonle.github.io/demoai/ai.js", stream => {
 				say("Connected. Start updating....");
-				stream.pipe(fs.createReadStream(__dirname + "/ai.js"));
+				stream.pipe(fs.createWriteStream(__dirname + "/ai.js"));
 				stream.on('end', () => {
 					say("I'm done. Now restart chatbotjs", true);
 				});
@@ -155,7 +161,7 @@ module.exports = {
 	// Bot name
 	nickname: "Demobot",
 	// Bot version
-	version: "1.0.2",
+	version: "1.0.3",
 	// Bot description
 	description: "A chatbot that used to demonstrate ChatbotJS",
 	// Data, Thw triggers.
