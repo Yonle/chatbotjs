@@ -21,7 +21,7 @@ module.exports = function runner(ai, opt = {}) {
 	if (ai.nickname) v(`Bot name: ${ai.nickname}, "CHATBOT"`);
 	if (ai.version) v(`Bot version: ${ai.version}`, "CHATBOT");
 	bot = function (str, cb) {
-			if (typeof(cb) !== "function") return new Error("Callback must be a function");
+			if (cb && typeof(cb) !== "function") return new Error("Callback must be a function");
         	let response = [];
         	let ended = false;
         	v('say() Called', "SAY");
@@ -29,9 +29,11 @@ module.exports = function runner(ai, opt = {}) {
 					let responded = false;
 	        		say = (msg, end) => {
 	        			responded = true;
-	        			v('Called Callbacks.', 'say()');
 	        			if (!msg) return v('Empty bot replies. Ignored', 'say()');
-	        			cb(msg);
+						if (typeof(cb) === "function") {
+	        				cb(msg);
+	        				v('Called Callbacks.', 'say()');
+	        			}
 	        			response.push(msg);
 	        			if (end) {
 	        				v('Ended', 'say()');
