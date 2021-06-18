@@ -268,7 +268,7 @@ When you ran it:
 (You) Hello
 (Chatbot) Hi
 (Chatbot) Thinking....
-# This psrt is where your bots think forever
+# This part is where your bots think forever
 ```
 #### The correct way
 For multiple Response:
