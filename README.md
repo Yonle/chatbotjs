@@ -185,10 +185,10 @@ So here's a thing that you should know:
 ...
 	data: {
 		// Reply, A function that used for Replying to User Message.
-	    // |_____________________________
+		// |_____________________________
 		//                               |
 		// Message. Returns string of Use|r Message.
-	    // |____________________________________
+		// |____________________________________
 		//                               ↓      ↓
 		"hello|hi|hey|hallo": function (reply, msg) {
 			reply("Oh hello there");
