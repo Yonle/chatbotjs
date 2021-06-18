@@ -9,6 +9,7 @@ A docs for ChatbotJS v0.0.3 and so on
   - [Hello World](#helloworld)
   - [Random Response](#randomresponse)
   - [Engines (Function)](#engines)
+  - [Metadata](#metadata)
   - [Notice](#notice)
 ## Module
 To using ChatbotJS as a module, Do `require("@yonle/chatbotjs")`.
@@ -47,7 +48,7 @@ const chatbot = ChatbotJS({
 ```
 
 ### `bot`
-A function that used to speak with your AI. Returns `Promise`.
+A function that used to speak with your AI. Returns `Object`.
 
 ```
 <bot>(Message<String>, <Callback>)
@@ -212,6 +213,21 @@ A properties that returns String of user message.
 
 ### Example
 See [here](https://github.com/Yonle/demoai/blob/main/ai.js#L98).
+
+## Metadata
+Did you know that you can fill information about your bot? Here's how you do this:
+```js
+module.exports = {
+	nickname: "My AI",
+	version: "1.0.0 Demo",
+	description: "My First AI",
+
+	data: {
+		// ....
+	}
+}
+```
+The metadata will shows up at [`bot`](#bot).
 
 ## Notice
 ### 1. Do not do this:
