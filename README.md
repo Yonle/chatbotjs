@@ -23,7 +23,7 @@ A function that used for load & reading a Object for AI. Returns [`bot`](#bot) a
 ```
 
 #### Options
- - `verbose` A options that used for Logging any Debug logs. Must provide a function.
+##### `verbose` A options that used for Logging any Debug logs. Must provide a function.
 ```js
 <runner>(...., {
 	verbose: log => console.log(log)
@@ -31,6 +31,7 @@ A function that used for load & reading a Object for AI. Returns [`bot`](#bot) a
 ```
 
 #### Example
+
 ```js
 // Chatbot Script
 const ai = require("./myAi.js");
