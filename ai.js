@@ -12,6 +12,10 @@ let data = {
 	"hey": [
 		"Heyya. How's your day?"
 	],
+	"who are you": [
+		"I'm demobot",
+		"I'm Demonstration bot"
+	],
 	"How are you": [
 		"Feeling great",
 		"A little bored",
@@ -139,7 +143,7 @@ let data = {
 			say("WHY YOU RICKROLL ME!?!?", true);
 		}
 	},
-	"what is|how to|who is|who are|what do|what are|who do|ok google|who's": function (say, str) {
+	"how can|what is|how to|who is|who are|what do|what are|who do|ok google|who's": function (say, str) {
 		if (RegExp("ok google").exec(str)) str = str.split(" ").slice(2).join(" ");
 		if (!str.length) return;
 		say("Hold there....");
@@ -153,6 +157,21 @@ let data = {
 	"no": "Okay.",
 	"rm": "Executing  rm without Sudo.\n(chatbot) Not Hackerman.",
 	"sudo": (say, str) => say(`Executing ${str}.\n(chatbot) HACKERMAN :OOO`, true),
+	"deez nut": [
+		"mogan deez nut yo mama",
+		"Oh no, cringe"
+	],
+	"cringe": () => process.exit(666),
+	"weeb": "I'm not even weeb",
+	"ohay*": "朝食は済ませましたか？",
+	"dumb": "I'm not a professional AI as how do you expected.",
+	"bitch": () => process.exit(0),
+	"noob": "I'm not gamer",
+	"help": "?",
+	"i'm broke": [
+		"What was makes you feels broken?",
+	],
+	"hey alexa": () => {},
 	"": ["Hmmmm", "Want some coffe?", "I see", "🤔🤔🤔", "Sorry. I didn't Understand. Try do `demobot update`", "While i'm seems outdated"],
 }
 
@@ -161,7 +180,7 @@ module.exports = {
 	// Bot name
 	nickname: "Demobot",
 	// Bot version
-	version: "1.0.3",
+	version: "1.0.4",
 	// Bot description
 	description: "A chatbot that used to demonstrate ChatbotJS",
 	// Data, Thw triggers.

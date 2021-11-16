@@ -43,23 +43,23 @@ module.exports = function runner(ai, opt = {}) {
 	        		}
         	        str = str.toLowerCase();
 	               	Object.keys(ai.data).forEach(async (regex, index) => {
-							if (ended || responded) return;
+				if (ended || responded) return;
 	                        regex = regex.toLowerCase();
 	                        v(`Checking ${index+1} of ${Object.keys(ai.data).length} Triggers...`, 'say()');
 	                        if (!RegExp(regex).exec(str)) return;
-                 	        switch (typeof ai.data[regex]) {
-                           		case "object":
-                                	if (util.isArray(ai.data[regex])) say(ai.data[regex][Math.floor(Math.random() * ai.data[regex].length)], true);
-                                	break;
-                            	case "function":
-                       	        	if (util.types.isPromise(ai.data[regex])) say(await ai.data[regex](say, str));
-                               		say(ai.data[regex](say, str));
-                                	break;
-                                default:
-                               	    say(ai.data[regex], true);
-                       	            break;
-							}
-							v(`Triggers ${index+1} Triggered`, `say()`);
+	                 	        switch (typeof ai.data[regex]) {
+	                           		case "object":
+        	                        	if (util.isArray(ai.data[regex])) say(ai.data[regex][Math.floor(Math.random() * ai.data[regex].length)], true);
+                	                	break;
+                        	    	case "function":
+                       	        		if (util.types.isPromise(ai.data[regex])) say(await ai.data[regex](say, str));
+                               			say(ai.data[regex](say, str));
+	                                	break;
+        	                        default:
+                	               	    say(ai.data[regex], true);
+                	       	            break;
+				}
+				v(`Triggers ${index+1} Triggered`, `say()`);
                 	});
         	});
 	}

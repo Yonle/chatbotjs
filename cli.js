@@ -28,7 +28,7 @@ if (ai.description) console.log(ai.description);
 
 rl.setPrompt("(You) ");
 rl.on('line', async (str) => {
-	process.stdout.write("(chatbot) Thinking.... ");
+	process.stdout.write(`(${ai.nickname}) Thinking.... `);
 	process.stdout.cursorTo(0);
 	let rtime = Date.now();
 	
